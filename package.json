@@ -9,6 +9,10 @@
   },
   "type": "module",
   "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix --ext .mjs",
+    "reset": "npm run clean && npm install",
+    "clean": "rimraf node_modules",
     "test": "test"
   },
   "repository": {
@@ -19,13 +23,21 @@
     "data",
     "structures",
     "algorithms",
-    "Big",
-    "O"
+    "Big O"
   ],
   "author": "yzhbankov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yzhbankov/dsa/issues"
   },
-  "homepage": "https://github.com/yzhbankov/dsa#readme"
+  "homepage": "https://github.com/yzhbankov/dsa#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2"
+  }
 }
